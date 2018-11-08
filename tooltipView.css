@@ -1,0 +1,46 @@
+#box{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    height: 20px;
+    width: 30px;
+    /* display: none; */
+}
+
+.tooltip-box{
+    position: fixed;
+    top:100px;
+    left: 100px;
+    padding: 10px;
+    background-color: black;
+    box-sizing: border-box;
+    color: white; 
+}
+
+.tooltip-arrow{
+    position: fixed;
+    width: 0px;
+    height: 0px;
+    top: -200px;
+    left: -200px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid red;
+}
+
+.tooltip-arrow.bottom{
+
+}
+
+.tooltip-arrow.top{
+    transform: rotateZ(180deg);
+}
+
+.tooltip-arrow.right{
+    transform: rotateZ(-90deg);
+}
+
+.tooltip-arrow.left{
+    transform: rotateZ(90deg);
+}
