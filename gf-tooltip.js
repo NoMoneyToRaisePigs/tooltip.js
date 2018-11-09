@@ -1,3 +1,7 @@
+var gfTooltipStyle = document.createElement('style');
+gfTooltipStyle.innerHTML = '.tooltip-arrow,.tooltip-box{position:fixed;opacity:0;transition:opacity .3s ease-in-out}.tooltip-box{padding:10px;background-color:#ddd;box-sizing:border-box;box-shadow:0 2px 8px 0 #fff;border:1px solid #ddd;border-radius:3px;color:rgba(0,0,0,.7)}.tooltip-arrow{width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-bottom:8px solid #ddd}.tooltip-arrow.show,.tooltip-box.show{opacity:1}.tooltip-arrow.show-below{transform:rotateZ(0)}.tooltip-arrow.show-above{transform:rotateZ(180deg)}';;
+document.getElementsByTagName('head')[0].appendChild(gfTooltipStyle);
+
 function gf_tooltip(id, text){
     var target = document.getElementById(id);
 

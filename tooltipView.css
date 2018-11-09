@@ -1,46 +1,35 @@
-#box{
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    height: 20px;
-    width: 30px;
-    /* display: none; */
-}
-
 .tooltip-box{
     position: fixed;
-    top:100px;
-    left: 100px;
     padding: 10px;
-    background-color: black;
-    box-sizing: border-box;
-    color: white; 
+    background-color: #dddddd;
+    box-sizing: border-box; 
+    box-shadow: 0 2px 8px 0 white;
+    border: solid 1px #dddddd;
+    border-radius: 3px;
+    color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .tooltip-arrow{
     position: fixed;
     width: 0px;
     height: 0px;
-    top: -200px;
-    left: -200px;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-bottom: 8px solid red;
+    border-bottom: 8px solid #dddddd;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
-.tooltip-arrow.bottom{
-
+.tooltip-arrow.show, .tooltip-box.show{
+    opacity: 1;
 }
 
-.tooltip-arrow.top{
+.tooltip-arrow.show-below{
+    transform: rotateZ(0deg);
+}
+
+.tooltip-arrow.show-above{
     transform: rotateZ(180deg);
-}
-
-.tooltip-arrow.right{
-    transform: rotateZ(-90deg);
-}
-
-.tooltip-arrow.left{
-    transform: rotateZ(90deg);
 }
