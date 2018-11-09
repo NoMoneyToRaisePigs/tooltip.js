@@ -69,8 +69,11 @@ function gf_tooltip(id, text){
     }
 
     function removeElements(){
-        tooltipBox.remove();
-        tooltipArrow.remove();
+        document.body.removeChild(tooltipBox);
+        document.body.removeChild(tooltipArrow);
+        // IE not supported
+        // tooltipBox.remove();
+        // tooltipArrow.remove();
     }
 
     function appendEelements(){
